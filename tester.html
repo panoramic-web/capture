@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      input[type="range"] {
+         width: 800px;
+      }
+
+      input[type="number"] {
+         padding: 20px;
+         border: 3px solid black;
+         margin-bottom: 50px;
+      }
+
+      input[type="submit"] {
+         padding: 20px;
+         background: black;
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+
+   <iframe src="index.html" frameborder="0" width="1700px" style="height: 600px"></iframe>
+   <input type="range" max="1300" min="300" value="1200">
+   <h1></h1>
+
+   <script>
+      var slider = document.querySelector('input');
+      var iframe = document.querySelector('iframe');
+      var indicate = document.querySelector('h1');
+
+      iframe.style.width = slider.value + 'px';
+      indicate.innerText = slider.value + 'px';
+
+      slider.oninput = function() {
+         iframe.style.width = slider.value + 'px';
+         indicate.innerText = slider.value + 'px';
+      }
+   </script>
+
+</body>
+
+</html>
