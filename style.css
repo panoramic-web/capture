@@ -54,7 +54,6 @@ header {
    /* background: linear-gradient(90deg, rgba(254, 249, 213, 1) 4%, rgba(245, 233, 214, 1) 42%, rgba(245, 233, 214, 1) 65%); */
    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fef9d5", endColorstr="#f5e9d6", GradientType=1); */
 
-   background: linear-gradient(to left bottom, #0004, #0008), url("./images/my-hairstyle-flipped.jpg") no-repeat left top / cover;
    background: url("./images/hair styling.jpg") no-repeat center / cover;
 }
 
@@ -63,12 +62,13 @@ header>p {
    z-index: 3;
    font-size: 60px;
    color: #fff4;
-   top: 200px;
-   left: 100px;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 150px;
 }
 
 
-/* _____Navigation bar_____ */
+/* _____Navbar_____ */
 
 .nav-wrapper {
    width: 100%;
@@ -80,8 +80,6 @@ header>p {
    height: 10vh;
    padding: 3%;
    margin: 0 auto;
-   /* display: grid; */
-   /* grid-template: 1fr / 4fr 1fr 4fr; */
    display: flex;
    align-items: center;
 }
@@ -90,17 +88,8 @@ header>p {
    flex: 1;
 }
 
-.navbar .logo p {
-   text-decoration: none;
-   color: var(--color-light);
-   letter-spacing: 2px;
-   font-size: 9px;
-   font-family: 'Playfair Display', serif;
-}
-
 .navbar .logo-name {
    font-weight: bold;
-   text-align: center;
 }
 
 .navbar .logo-name a {
@@ -109,6 +98,15 @@ header>p {
    font-size: 25px;
    letter-spacing: 5px;
    font-family: 'Playfair Display', serif;
+}
+
+.navbar .logo p {
+   text-decoration: none;
+   color: var(--color-light);
+   letter-spacing: 2px;
+   font-size: 9px;
+   font-family: 'Playfair Display', serif;
+      text-align: center;
 }
 
 
@@ -263,14 +261,13 @@ header .hero-right {}
 
 header .hero-left p {
    writing-mode: vertical-lr;
-   font-size: 11px;
+   font-size: 30px;
    font-family: 'Playfair Display', serif;
    color: var(--color-light);
+   opacity:0.5;
+   letter-spacing: 5px;
 }
 
-header .hero-left p:last-child {
-   margin-top: 20px;
-}
 
 
 
@@ -292,9 +289,9 @@ header .hero-right h1 {
    position: relative;
    color: var(--color-light);
    font-size: 70px;
+   letter-spacing: 5px;
    font-family: 'Playfair Display', serif;
    font-weight: bold;
-   text-transform: uppercase;
    margin: 4px 0;
 }
 
