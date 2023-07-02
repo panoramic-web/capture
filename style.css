@@ -255,23 +255,25 @@ ol {
 
 .main .left .buttons a {
    background: none;
-   border: 1px solid #fff;
-   color: #fff;
+   border: 1px solid #EB5912;
+   color: #EB5912;
    width: max-content;
    padding: 10px 20px;
    font-size: 20px;
    letter-spacing: 1px;
-   transition: background .3s;
+   transition-duration: .3s;
    border-radius: 50px;
 }
 
 .main .left .buttons a:hover {
+   color: #fff;
    background: #EB5912;
    border-color: #EB5912;
    box-shadow: 0 0 20px #EB5912;
 }
 
 .main .left .buttons a.first {
+   color: #fff;
    background: #EB5912;
    border-color: #EB5912;
    margin-right: 20px;
