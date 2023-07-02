@@ -228,7 +228,7 @@ ol {
 
 .main .left h1 {
    color: #EB5912;
-   font-size: 4rem;
+   font-size: 4.5rem;
    font-weight: lighter;
    letter-spacing: 10px;
    margin-bottom: 10px;
@@ -446,10 +446,6 @@ footer>div {
    .brands .card .content h3 {
       font-size: 20px;
    }
-
-   .brands .card .content p {
-      font-size: 12px;
-   }
 }
 
 
@@ -547,25 +543,27 @@ footer>div {
 
 
 
-@media (max-width: 450px) {
-   .header nav {
-      padding: 20px;
-   }
-
+@media (max-width: 500px) {
    .main .left h1 {
-      font-size: 40px;
+      font-size: 2.5rem;
    }
 
    .main .left h3 {
-      font-size: 20px;
+      font-size: 1rem;
       margin-bottom: 10px;
    }
 
+   .main .left .buttons {
+      width: 60%;
+      flex-direction: column;
+   }
+
    .main .left .buttons a {
-      font-size: 13px;
+      width: 100%;
+      text-align: center;
    }
 
    .main .left .buttons a.first {
-      margin-right: 10px;
+      margin-bottom: 1rem;
    }
 }
