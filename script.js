@@ -1,3 +1,6 @@
+
+const script = ()=>{
+   
 var menuIcon = document.querySelector('#menu_icon');
 var closeIcon = document.querySelector('#close_icon');
 var linkWrapper = document.querySelector('.link_wrapper');
@@ -21,3 +24,6 @@ for (var i = 0; i <= menuItems.length; i++) {
       }
    }
 }
+};
+
+export default script;
