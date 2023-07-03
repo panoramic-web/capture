@@ -265,20 +265,32 @@ ol {
    border-radius: 50px;
 }
 
-.main .left .buttons a:hover {
-   color: #fff;
-   background: #EB5912;
-   border-color: #EB5912;
-   box-shadow: 0 0 20px #EB5912;
-}
-
+.main .left .buttons a:hover,
 .main .left .buttons a.first {
    color: #fff;
    background: #EB5912;
    border-color: #EB5912;
-   margin-right: 20px;
    box-shadow: 0 0 20px #EB5912;
+   animation: button_anim .5s .3s linear infinite;
 }
+
+.main .left .buttons a.first {
+   margin-right: 20px;
+}
+
+
+@keyframes button_anim {
+   0% {
+      box-shadow: 0 0 20px #EB5912;
+   }
+
+   100% {
+      box-shadow: 0 0 10px #EB5912;
+   }
+}
+
+
+
 
 .main .right {
    align-items: end;
@@ -544,6 +556,19 @@ footer>div {
 
 
 @media (max-width: 500px) {
+   .swiper-slide .subtitle {
+      font-size: 1rem;
+   }
+
+   .swiper-slide .text {
+      font-size: .5rem;
+   }
+
+   .swiper-button-prev,
+   .swiper-button-next {
+      transform: scale(.5);
+   }
+
    .main .left h1 {
       font-size: 2.5rem;
    }
@@ -564,6 +589,6 @@ footer>div {
    }
 
    .main .left .buttons a.first {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
    }
 }
