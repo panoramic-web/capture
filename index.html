@@ -287,7 +287,7 @@
    <script src="./swiper-bundle.min.js"></script>
 
    <!-- Initialize Swiper -->
-   <script>
+   <script type="module">
       var swiper = new Swiper(".mySwiper", {
          loop: true,
          speed: 600,
@@ -302,8 +302,9 @@
             prevEl: ".swiper-button-prev",
          },
       });
+      
+      import script from './script.js';
    </script>
-   <script src="script.js"></script>
 
 </body>
 
