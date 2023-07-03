@@ -134,7 +134,7 @@ ol {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 35px 4%;
+   padding: 1.5rem 4%;
    margin: 0 auto;
    z-index: 2;
 }
@@ -182,16 +182,8 @@ ol {
    height: 1.5px;
    margin: 2px 0;
    background: #fff;
-   border-radius: 10px;
 }
 
-.header nav .menu_icon span:nth-child(2) {
-   width: .7rem;
-}
-
-.header nav .menu_icon span:last-child {
-   width: .5rem;
-}
 
 
 
@@ -259,7 +251,7 @@ ol {
    color: #EB5912;
    width: max-content;
    padding: 10px 20px;
-   font-size: 20px;
+   font-size: 1rem;
    letter-spacing: 1px;
    transition-duration: .3s;
    border-radius: 50px;
@@ -379,6 +371,107 @@ main {
 .brands h2 span {
    color: #fff;
 }
+
+.brands .services {
+   width: 100%;
+   max-width: 1500px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 5rem auto;
+}
+
+.brands .services .grid {
+   width: 50%;
+   margin-right: 2rem;
+   display: grid;
+   grid-template: 100px 100px 100px / repeat(2, 1fr);
+   grid-template-areas: "one two"
+      "three four"
+      "five four";
+   grid-gap: 1rem;
+   transition: animation 2s;
+   animation: grid_anim 5s linear infinite;
+}
+
+@keyframes grid_anim {
+   0% {
+      grid-template-areas: "one two"
+         "three four"
+         "five four";
+   }
+
+   50% {
+      grid-template-areas: "one one"
+         "two three"
+         "four five";
+   }
+
+   100% {
+      grid-template-areas: "one two"
+         "four three"
+         "four five";
+   }
+}
+
+
+[class*="grid_item"] {
+   /* background: url('./images/theregisti-HSXIp58yPyI-unsplash.jpg') no-repeat center / cover; */
+   background: #EB5912;
+   border-radius: 1rem;
+}
+
+.brands .services .grid_item_1 {
+   grid-area: one;
+}
+
+.brands .services .grid_item_2 {
+   grid-area: two;
+}
+
+.brands .services .grid_item_3 {
+   grid-area: three;
+}
+
+.brands .services .grid_item_4 {
+   grid-area: four;
+}
+
+.brands .services .grid_item_5 {
+   grid-area: five;
+}
+
+
+.brands .services .right {
+   flex: 1;
+}
+
+.brands .services .right .info {
+   color: #fff;
+   font-size: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+
+.brands .services .right .overview {
+   background: #EB5912;
+   border: 1px solid #EB5912;
+   color: #fff;
+   width: max-content;
+   padding: 10px 20px;
+   font-size: 1rem;
+   letter-spacing: 1px;
+   transition-duration: .3s;
+   border-radius: 50px;
+   animation: button_anim .5s .3s linear infinite;
+}
+
+
+
+
+
+
+
+
 
 .brands .card {
    display: flex;
@@ -590,5 +683,28 @@ footer>div {
 
    .main .left .buttons a.first {
       margin-bottom: 1.5rem;
+   }
+
+
+
+
+   .brands .services {
+      flex-direction: column;
+   }
+
+   .brands .services .grid {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 3rem;
+   }
+
+   .brands .services .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .brands .services .right .info {
+      font-size: 1rem;
+      text-align: center;
    }
 }
